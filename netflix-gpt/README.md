@@ -39,6 +39,11 @@
 - GPT search bar and page (search with text : funny indian retro movies)
 - Added multi-lingual feature in our app
 - Integrate GPT APIs
+- GPT search and get openAI api key
+- Memoization
+- Fetched GPT movie suggestions from TMDB
+- Created GPT slice and added data
+- Re-used movieList component
 
 # Features:
 
