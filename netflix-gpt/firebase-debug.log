@@ -1,0 +1,33 @@
+[debug] [2024-05-19T09:21:09.341Z] ----------------------------------------------------------------------
+[debug] [2024-05-19T09:21:09.344Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Harsha\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2024-05-19T09:21:09.344Z] CLI Version:   13.7.5
+[debug] [2024-05-19T09:21:09.344Z] Platform:      win32
+[debug] [2024-05-19T09:21:09.344Z] Node Version:  v21.5.0
+[debug] [2024-05-19T09:21:09.344Z] Time:          Sun May 19 2024 14:51:09 GMT+0530 (India Standard Time)
+[debug] [2024-05-19T09:21:09.345Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-19T09:21:09.448Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-19T09:21:09.448Z] > authorizing via signed-in user (radhikaxy321@gmail.com)
+[debug] [2024-05-19T09:21:09.448Z] [iam] checking project netflixgpt-a6adf for permissions ["firebase.projects.get"]
+[debug] [2024-05-19T09:21:09.451Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-a6adf:testIamPermissions [none]
+[debug] [2024-05-19T09:21:09.451Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-a6adf:testIamPermissions x-goog-quota-user=projects/netflixgpt-a6adf
+[debug] [2024-05-19T09:21:09.451Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-a6adf:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-05-19T09:21:10.712Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-a6adf:testIamPermissions 200
+[debug] [2024-05-19T09:21:10.712Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-a6adf:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-05-19T09:21:10.712Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf [none]
+[debug] [2024-05-19T09:21:11.352Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf 200
+[debug] [2024-05-19T09:21:11.353Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf {"projectId":"netflixgpt-a6adf","projectNumber":"140396991570","displayName":"NetflixGPT","name":"projects/netflixgpt-a6adf","resources":{"hostingSite":"netflixgpt-a6adf"},"state":"ACTIVE","etag":"1_863fdf32-4b0c-445b-8557-3f220325a35b"}
+[info] 
+[info] === Serving from 'C:\Users\Harsha\Radhika\Namaste React\Netflix-GPT\netflix-gpt'...
+[info] 
+[debug] [2024-05-19T09:21:11.356Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/netflixgpt-a6adf/sites 
+[debug] [2024-05-19T09:21:12.241Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/netflixgpt-a6adf/sites 200
+[debug] [2024-05-19T09:21:12.241Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/netflixgpt-a6adf/sites {"sites":[{"name":"projects/netflixgpt-a6adf/sites/netflixgpt-a6adf","defaultUrl":"https://netflixgpt-a6adf.web.app","appId":"1:140396991570:web:f068fcaa318da875cefb8b","type":"DEFAULT_SITE"}]}
+[debug] [2024-05-19T09:21:12.242Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf/webApps/1:140396991570:web:f068fcaa318da875cefb8b/config [none]
+[debug] [2024-05-19T09:21:13.261Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf/webApps/1:140396991570:web:f068fcaa318da875cefb8b/config 200
+[debug] [2024-05-19T09:21:13.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf/webApps/1:140396991570:web:f068fcaa318da875cefb8b/config {"projectId":"netflixgpt-a6adf","appId":"1:140396991570:web:f068fcaa318da875cefb8b","storageBucket":"netflixgpt-a6adf.appspot.com","apiKey":"AIzaSyC0jVFiHV4bo4BBuO175MrAysfiCawC9L8","authDomain":"netflixgpt-a6adf.firebaseapp.com","messagingSenderId":"140396991570","measurementId":"G-11WFSBFXGC"}
+[debug] [2024-05-19T09:21:13.266Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf [none]
+[debug] [2024-05-19T09:21:13.528Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf 200
+[debug] [2024-05-19T09:21:13.529Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-a6adf {"projectId":"netflixgpt-a6adf","projectNumber":"140396991570","displayName":"NetflixGPT","name":"projects/netflixgpt-a6adf","resources":{"hostingSite":"netflixgpt-a6adf"},"state":"ACTIVE","etag":"1_863fdf32-4b0c-445b-8557-3f220325a35b"}
+[info] i  hosting[netflixgpt-a6adf]: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] +  hosting[netflixgpt-a6adf]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
