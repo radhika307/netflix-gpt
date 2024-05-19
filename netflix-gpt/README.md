@@ -10,7 +10,7 @@
 - useRef hook
 - Firebase for authentication and hosting
 - Firebase setup
-- Deploying app to production (https://netflixgpt-a6adf.web.app)
+- Deploying app to production (https://netflixgpt-a6adf.web.app/)
 - Create signup user account in firebase
 - Implement sign in user api
 - Created redux store with userSlice
