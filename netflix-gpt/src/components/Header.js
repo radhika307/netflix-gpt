@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, removeUser } from "../utils/userSlice";
+import { addUser, removeUser } from "../utils/slice/userSlice";
 import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
-import { toggleGptSearchView } from "../utils/gptSlice";
-import { changeLanguage } from "../utils/configSlice";
+import { toggleGptSearchView } from "../utils/slice/gptSlice";
+import { changeLanguage } from "../utils/slice/configSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -29,13 +29,12 @@ const Header = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const { uid, email, displayName, photoURL } = user.uid;
+        const { uid, email, displayName } = user;
         dispatch(
           addUser({
             uid: uid,
             email: email,
             displayName: displayName,
-            photoURL: photoURL,
           })
         );
         navigate("/browse");
@@ -78,14 +77,16 @@ const Header = () => {
             </select>
           )}
           <button
-            className="py-2 px-4 text-white underline"
+            className="p-2 m-2 text-white bg-gray-900"
             onClick={handleGptSearchClick}
           >
             {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
-          <img className="w-12 h-12" alt="user-icon" src={user?.photoURL} />
-          <button onClick={handleSignout} className="font-bold text-white">
-            (Sign Out)
+          <button
+            onClick={handleSignout}
+            className="p-2 m-2 font-bold text-red-500 bg-gray-900"
+          >
+            Sign Out
           </button>
         </div>
       )}
