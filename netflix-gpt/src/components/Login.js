@@ -48,7 +48,6 @@ const Login = () => {
             displayName: name.current.value,
           })
             .then(() => {
-              debugger;
               // Profile updated!
               const { uid, email, displayName } = auth.currentUser;
               dispatch(
