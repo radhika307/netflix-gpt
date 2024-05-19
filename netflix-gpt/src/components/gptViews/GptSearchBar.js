@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import lang from "../utils/languageConstants";
+import lang from "../../utils/languageConstants";
 import { useSelector } from "react-redux";
-import openai from "../utils/openAi";
-import { API_OPTIONS, gptResults } from "../utils/constant";
-import { addGptMovieResult } from "../utils/gptSlice";
+import openai from "../../utils/openAi";
+import { API_OPTIONS, gptResults } from "../../utils/constant";
+import { addGptMovieResult } from "../../utils/slice/gptSlice";
 import { useDispatch } from "react-redux";
 
 const GptSearchBar = () => {
@@ -41,25 +41,30 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[35%] md:pt-[10%] flex justify-center">
-      <form
-        className="w-full md:w-1/2 bg-black grid grid-cols-12"
-        onSubmit={(e) => e.preventDefault()}
-      >
-        <input
-          ref={searchText}
-          type="text"
-          className="p-4 m-4 col-span-9"
-          placeholder={lang[selectedLanguage].gptSearchPlaceholder}
-        />
-        <button
-          className="py-2 px-4 m-4 bg-red-700 text-white rounded-lg col-span-3"
-          onClick={handleGptSearchClick}
+    <>
+      <div className="pt-[35%] md:pt-[10%] flex justify-center">
+        <form
+          className="w-full md:w-1/2 bg-black grid grid-cols-12"
+          onSubmit={(e) => e.preventDefault()}
         >
-          {lang[selectedLanguage].search}
-        </button>
-      </form>
-    </div>
+          <input
+            ref={searchText}
+            type="text"
+            className="p-4 m-4 col-span-9"
+            placeholder={lang[selectedLanguage].gptSearchPlaceholder}
+          />
+          <button
+            className="py-2 px-4 m-4 bg-red-700 text-white rounded-lg col-span-3"
+            onClick={handleGptSearchClick}
+          >
+            {lang[selectedLanguage].search}
+          </button>
+        </form>
+      </div>
+      <div className="p-2 m-2 text-white flex justify-center font-bold">
+        <p>Use words like: Horror, Comedy, Retro for search.</p>
+      </div>
+    </>
   );
 };
 

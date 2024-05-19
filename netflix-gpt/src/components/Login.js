@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
+import { addUser } from "../utils/slice/userSlice";
 import { BG_URL, PHOTO_URL } from "../utils/constant";
 
 const Login = () => {
@@ -46,17 +46,16 @@ const Login = () => {
           //update profile
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL: PHOTO_URL,
           })
             .then(() => {
+              debugger;
               // Profile updated!
-              const { uid, email, displayName, photoURL } = auth.currentUser;
+              const { uid, email, displayName } = auth.currentUser;
               dispatch(
                 addUser({
                   uid: uid,
                   email: email,
                   displayName: displayName,
-                  photoURL: photoURL,
                 })
               );
             })
