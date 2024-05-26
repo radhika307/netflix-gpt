@@ -60,8 +60,3 @@
 - NetflixGPT
   - Search bar
   - Movie suggestions
-
-TO-DO:
-
-- build a dropdown menu for sign out
-- create an error page
